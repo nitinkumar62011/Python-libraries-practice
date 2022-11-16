@@ -1,0 +1,20 @@
+INFO:root:this is my first log
+INFO:root:this is my first log
+INFO:root:this is hi my first log
+ERROR:root:thisis my error
+WARNING:root:this is my warning
+INFO:root:this is hi my first log
+ERROR:root:thisis my error
+WARNING:root:this is my warning
+WARNING:root:this is my warning
+INFO:root:this is hi my first log
+ERROR:root:thisis my error
+WARNING:root:this is my warning
+WARNING:root:this is my warning
+2022-11-15 15:01:24,159 this is hi my first log
+2022-11-15 15:01:38,363 this is hi my first log
+2022-11-15 15:01:40,175 thisis my error
+2022-11-15 15:01:40,669 this is my warning
+2022-11-15 15:02:51,175 this is hi my first log
+2022-11-15 15:03:12,614 this is hi my first log
+2022-11-15 15:03:27,419 this is hi my first log

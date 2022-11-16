@@ -1,0 +1,7 @@
+2022-11-15 15:03:54,649 this is hi my first log
+2022-11-15 16:16:40,735 start the function at value{a} and {b}
+2022-11-15 16:16:40,736 value is {c}
+2022-11-15 16:17:19,051 start the function at value4 and 6
+2022-11-15 16:17:19,051 value is 0.6666666666666666
+2022-11-15 16:17:39,499 start the function at value4 and 0
+2022-11-15 16:17:39,500 error occured   division by zero
