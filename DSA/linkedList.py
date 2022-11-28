@@ -47,6 +47,28 @@ class LinkedList:
                 return True
             temp=temp.next
         return False
+    def isCycleDetected(self):
+        hare=self.head
+        tortoise=self.head
+        i=0
+        while hare and tortoise and hare.next:
+            
+            i=i+1
+            print("iteration of cycle",i)
+            hare=hare.next.next
+            tortoise=tortoise.next
+            if hare==tortoise:
+                 return True
+        return False
+    def lastKthElement(self,k):
+        first=self.head
+        kth_node=self.head
+        for i in range(k+1):
+            kth_node=kth_node.next
+        while kth_node:
+            first=first.next
+            kth_node=kth_node.next
+        first.next=first.next.next
 
 
         
@@ -61,7 +83,15 @@ list.insertedAtEnd(51)
 list.insertedAtEnd(651)
 list.deleteAtPosition(2)
 list.printLinkedList()
+
 if list.search(40)==True:
     print("Element is Found")
 else:
     print('Element is not found')
+# list.head.next.next=list.head
+if list.isCycleDetected()==True:
+    print("cycle is Found")
+else:
+    print('cycle is not found')
+print("element lastKthElement",list.lastKthElement(2))
+list.printLinkedList()
