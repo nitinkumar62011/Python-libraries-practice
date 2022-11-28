@@ -21,7 +21,7 @@ def MinimumValueInBST(node):
     temp=node
     while temp.left:
         temp=temp.left
-    return temp.data
+    return temp
 def MaximumValueInBST(node):
     temp=node
     while temp.right:
@@ -39,6 +39,29 @@ def searchValueInBST(node,key):
     
     return False
     
+def deleteBSTnode(root,key):
+    if root is None:
+        return root
+    if key>root.data:
+        root.right=deleteBSTnode(root.right,key)
+    elif key<root.data:
+        root.left=deleteBSTnode(root.left,key)
+    else:
+        # node contains only single child
+        if root.right is None:
+            temp=root.left
+            root=None
+            return temp
+        elif root.left is None:
+            temp=root.right
+            root=None
+            return temp
+        else:
+            # nodes contains two children
+            temp=MinimumValueInBST(root.right)
+            root.data=temp.data
+            root.right=deleteBSTnode(root.right,temp.data)
+    return root
     
     
 
@@ -51,8 +74,10 @@ root=insertBST(root,2)
 inoderTraversal(root)
 print("Mininum value is ",MinimumValueInBST(root))
 print("maximum value is in BST Tree",MaximumValueInBST(root))
-if searchValueInBST(root,243)==True:
+if searchValueInBST(root,24)==True:
     print(" Value is found")
 else:
     print("value is not found in tree")
+print('delete ',deleteBSTnode(root,231))
+inoderTraversal(root)
 
